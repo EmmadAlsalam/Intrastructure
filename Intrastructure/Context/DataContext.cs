@@ -11,5 +11,11 @@ public partial class DataContext(DbContextOptions<DataContext> options) : DbCont
     public virtual DbSet<OrderItemEntity> OrderItems { get; set; }
     public virtual DbSet<CategoryEntity> Categories { get; set; }
 
+    protected override void OnModelCreating(ModelBuilder modelBuilder)
+    {
+        modelBuilder.Entity<OrderItemEntity>().HasKey(x => new { x.OrderItemId, x.OrderId });
+
+    }
+
 }
 

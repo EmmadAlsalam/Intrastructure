@@ -15,7 +15,7 @@ namespace Intrastructure.Entities
 
         public string PhoneNumber { get; set; } = null!;
 
-        public DateTime RegistrationDate { get; set; } 
+        
 
 
 
